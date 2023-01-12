@@ -116,8 +116,7 @@ by R-clicking and opening.
 
 ### Make It Go
 
-- To run the script itself, type `ruby lib/game_results.rb <input>` into the terminal where `<input>` is the local
-filepath of game results, e.g.
+- To run the script itself, type `ruby lib/game_results.rb`.
 
 ### Additional Notes
 
