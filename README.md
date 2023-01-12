@@ -127,13 +127,17 @@ variable of the `lib/game_results.rb` file.
 
 ---
 
-## Known Bugs // Suggested Features
+## Stretch Goals // Known Bugs // Suggested Features
 
 Report bugs & request features [here](https://github.com/danitcodes/soccer-challenge/issues).
 
 - _No bugs known at this time._
 - With more time, I would include more tests. Being out of TDD practice and time, I heavily utilized REPL-driven
 development. However, I have left comments of some of the unit testing ideas I might explore in the test file.
+- I would also follow a stricter Red, Green, Refactor workflow for unit tests. Not using unit testing much currently,
+this is a place I have room for improvement.
+- There is some code repetition and crossed lines in the logic that I would continue digging into refactor, DRY up,
+separate out concerns, and generally just smooth out.
 - A feature that could be useful in the future if points are accumulative between matchdays is to output total points
 in all matches played by team.
 
