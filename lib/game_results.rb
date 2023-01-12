@@ -13,11 +13,15 @@ def teams_in_league(teams)
     team_name = team_arr.shift(team_arr.count - 1).join(" ")
     team_names << team_name
   end
-  team_names.uniq.count
+  team_names
+end
+
+def teams_in_league_count(teams)
+  teams_in_league(teams).uniq.count
 end
 
 def lines_per_matchday(teams)
-  teams_in_league(teams) / 2
+  teams_in_league_count(teams) / 2
 end
 
 # split whole list of games played up by matchday
