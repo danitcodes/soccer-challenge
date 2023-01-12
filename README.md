@@ -25,7 +25,8 @@ output per matchday.
 1. Open the txt file, read the file line by line, & save the data.
 2. Recognize the start and end of a matchday w/script.
 3. Output top 3 point-scoring matchday winners by matchday.
-4. Output should be sorted by points first, highest to lowest, then by alphabetical order in case any team have equal points.
+4. Output should be sorted by points first, highest to lowest, then by alphabetical order in case any team have equal
+points.
 
 _Input_: txt file with results of games, one per line
 `# of teams` / 2 = number of games played on each matchday
@@ -83,10 +84,14 @@ entering this line of code:
 #### For Windows Users
 
 - Open a new Command Prompt window by typing "Cmd" in your computer's search bar.
-- Determine whether you have 32-bit or 64-bit Windows by following these [instructions](https://support.microsoft.com/en-us/help/13443/windows-which-version-am-i-running).
-- Go to [Git Bash](https://gitforwindows.org/), click on the "Download" button, and download the corresponding exe file from the Git for Windows site.
+- Determine whether you have 32-bit or 64-bit Windows by following these
+[instructions](https://support.microsoft.com/en-us/help/13443/windows-which-version-am-i-running).
+- Go to [Git Bash](https://gitforwindows.org/), click on the "Download" button, and download the corresponding
+exe file from the Git for Windows site.
 - Follow the instructions in the set up menu.
-- To get Ruby set up on your computer, I would recommend following a guide like [this one](https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/installing-ruby-on-windows), which will have more expertise than I can personally provide at this time.
+- There is no one direct way to get Ruby set up on a Windows computer. I would recommend following a guide like
+[this one](https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/installing-ruby-on-windows),
+which will have more expertise than I can personally provide at this time.
 
 </details>
 
@@ -116,7 +121,10 @@ filepath of game results, e.g.
 
 ### Additional Notes
 
-The `sample-input.txt` file has been included as an example input text file for this script to run with. If a file other than the example provided is needed to provide game inputs, that .txt file will simply need to be added to the root "soccer-challenge" folder, and the appropriate base file name will need to be substituted in the `static_filename` variable of the `lib/game_results.rb` file.
+The `sample-input.txt` file has been included as an example input text file for this script to run with. If a file
+other than the example provided is needed to provide game inputs, that .txt file will simply need to be added to the
+root "soccer-challenge" folder, and the appropriate base file name will need to be substituted in the `static_filename`
+variable of the `lib/game_results.rb` file.
 
 ---
 
@@ -124,8 +132,11 @@ The `sample-input.txt` file has been included as an example input text file for 
 
 Report bugs & request features [here](https://github.com/danitcodes/soccer-challenge/issues).
 
-- No bugs known at this time.
-- A feature that could be useful in the future if points are accumulative between matchdays is to output total points in all matches played by team.
+- _No bugs known at this time._
+- With more time, I would include more tests. Being out of TDD practice and time, I heavily utilized REPL-driven
+development. However, I have left comments of some of the unit testing ideas I might explore in the test file.
+- A feature that could be useful in the future if points are accumulative between matchdays is to output total points
+in all matches played by team.
 
 <div align="center">
 
