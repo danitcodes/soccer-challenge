@@ -2,6 +2,7 @@
 
 static_filename = File.absolute_path("sample-input.txt")
 games = []
+# one game per file line
 File.readlines(static_filename).each { |file_line| games << file_line }
 
 teams = games.map { |game| game.split(", ") }.flatten
@@ -20,6 +21,7 @@ def teams_in_league_count(teams)
   teams_in_league(teams).uniq.count
 end
 
+# establish matchday boundaries
 def lines_per_matchday(teams)
   teams_in_league_count(teams) / 2
 end
