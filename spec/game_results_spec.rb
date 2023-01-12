@@ -22,7 +22,7 @@ describe('#game_results') do
   # format the output printed to the terminal
 
   it("gets the number of teams_in_league based on the unique count of team names") do
-    expect(teams_in_league(teams)).to(eq(6))
+    expect(teams_in_league_count(teams)).to(eq(6))
   end
 
   it("gets number of txt file lines per matchday based on # of teams in league") do
