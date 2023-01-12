@@ -24,34 +24,32 @@ def lines_per_matchday(teams)
   teams_in_league_count(teams) / 2
 end
 
-# split whole list of games played up by matchday
+# games played up by matchday
 matchdays = []
 
 games.each_slice(lines_per_matchday(teams)) { |game| matchdays << game}
 
+# all games to date
 all_matchday_results = {}
-  # all games to date
+
 matchdays.each.with_index do |matchday, index|
   # games in a matchday
   single_matchday_results = {}
+
+  # individual game, e.g. "San Jose Earthquakes 3, Santa Cruz Slugs 3\n"
   matchday.each do |game|
-    # individual game => "San Jose Earthquakes 3, Santa Cruz Slugs 3\n"
-    teams_in_single_game = game.split(", ")
-    # => ["San Jose Earthquakes 3", "Santa Cruz Slugs 3\n"]
-    teams_in_single_game.each do |team|
+    game.split(", ").each do |team|
       team_arr = team.split(" ")
-      # => ["San", "Jose", "Earthquakes", "3"]
+      # "San Jose Earthquakes"
       team_name = team_arr.shift(team_arr.count - 1).join(" ")
-      # => "San Jose Earthquakes"
+
       points_scored = team_arr.last.to_i
-      # => 3
       if points_scored != nil
         single_matchday_results[team_name] = points_scored
       end
     end
   end
-  # sort by most pts scored to least, then sort team name by alphabetical order
-  # and take the top 3 teams from this sorted list
+  # sort by most pts scored to least, then sort team name by alphabetical order and take the top 3 teams from this sorted list
   sorted_results = single_matchday_results.sort_by {|k, v| [-v, k]}[0..2]
   all_matchday_results[index] = sorted_results.to_h
 end
