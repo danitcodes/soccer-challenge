@@ -28,4 +28,31 @@ describe('#game_results') do
   it("gets number of txt file lines per matchday based on # of teams in league") do
     expect(lines_per_matchday(teams)).to(eq(3))
   end
+
+  it("gets the names of the teams in a league") do
+    expect(teams_in_league(teams)).to(eq(["San Jose Earthquakes",
+                                              "Santa Cruz Slugs",
+                                              "Capitola Seahorses",
+                                              "Aptos FC",
+                                              "Felton Lumberjacks",
+                                              "Monterey United",
+                                              "Felton Lumberjacks",
+                                              "Aptos FC",
+                                              "Santa Cruz Slugs",
+                                              "Capitola Seahorses",
+                                              "Monterey United",
+                                              "San Jose Earthquakes",
+                                              "Santa Cruz Slugs",
+                                              "Aptos FC",
+                                              "San Jose Earthquakes",
+                                              "Felton Lumberjacks",
+                                              "Monterey United",
+                                              "Capitola Seahorses",
+                                              "Aptos FC",
+                                              "Monterey United",
+                                              "Capitola Seahorses",
+                                              "San Jose Earthquakes",
+                                              "Santa Cruz Slugs",
+                                              "Felton Lumberjacks"]))
+  end
 end
