@@ -21,6 +21,10 @@ describe('#game_results') do
   # tests sorting of the top 3 matchday teams
   # format the output printed to the terminal
 
+  it("determines the correct absolute file path for the input txt file") do
+    expect(static_filename).to(eq("/Users/daniellethompson/soccer-challenge/sample-input.txt"))
+  end
+
   it("prints a list of teams with their corresponding points scored in a game") do
     expect(teams).to(eq(["San Jose Earthquakes 3",
                           "Santa Cruz Slugs 3\n",
