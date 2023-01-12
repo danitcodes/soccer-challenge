@@ -66,4 +66,4 @@ def top_team_output(all_matchday_results)
   end
 end
 
-puts top_team_output(all_matchday_results)
+top_team_output(all_matchday_results)
